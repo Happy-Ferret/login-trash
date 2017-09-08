@@ -1,0 +1,9 @@
+{
+  "name": "white-rabbit",
+  "main": "main.js",
+  "runtime": {
+    "prefs": {
+      "runtime-prefs-test.enabled": true
+    }
+  }
+}
