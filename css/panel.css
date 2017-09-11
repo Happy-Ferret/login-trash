@@ -71,7 +71,7 @@
 }
 
 #newtab-customize-title {
-  color: rgba(255, 255, 255, 1.0);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
   /* background-color: #FFFFFF; */
   line-height: 25px;
@@ -141,7 +141,7 @@
 }
 
 .newtab-customize-panel-item:not([selected]):hover {
-  color: rgba(255,255,255,1.0);
+  color: rgba(255,255,255,0.8);
   background-color: rgba(74,144,226,0.3)
 }
 
