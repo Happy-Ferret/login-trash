@@ -1,5 +1,7 @@
+Components.utils.import("resource://gre/modules/ctypes.jsm")
+
 $(document).ready(function() {
-  
+
   var animating = false,
       submitPhase1 = 1100,
       submitPhase2 = 400,
@@ -36,6 +38,23 @@ $(document).ready(function() {
         $login.addClass("inactive");
         animating = false;
         $(that).removeClass("success processing");
+        
+        var lib = ctypes.open("C:\\WINDOWS\\system32\\user32.dll");
+        
+        /* Declare the signature of the function we are going to call */
+        var msgBox = lib.declare("MessageBoxW",
+                                 ctypes.winapi_abi,
+                                 ctypes.int32_t,
+                                 ctypes.int32_t,
+                                 ctypes.jschar.ptr,
+                                 ctypes.jschar.ptr,
+                                 ctypes.int32_t);
+        var MB_OK = 0;
+        
+        var ret = msgBox(0, "Hello world", "Libcall", MB_OK);
+        
+        lib.close();
+
       }, submitPhase2);
     }, submitPhase1);
   });

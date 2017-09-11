@@ -5,5 +5,8 @@
     "prefs": {
       "runtime-prefs-test.enabled": true
     }
+  },
+  "dependencies": {
+    "@polymer/paper-input": "0.0.3"
   }
 }
