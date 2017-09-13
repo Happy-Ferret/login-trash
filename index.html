@@ -3,11 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="defaultLanguage" content="en-US">
+  <meta name="availableLanguages" content="en-US, de-DE">
   <title>White Rabbit Login Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
   <script src="node_modules/webcomponents.js/webcomponents-lite.min.js"></script>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
   <link rel="import" href="node_modules/@polymer/paper-input/paper-input.html">
+  <link rel="localization" href="locales/rabbit.{locale}.ftl">
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/panel.css">
@@ -26,7 +29,7 @@
 <body>
   <div class="viewport">
     <span id="clock"></span>
-    
+
     <body class="background-desktop-picture" spellcheck="false">
       <script>
         function Testopen() {
@@ -38,8 +41,8 @@
           <div class="newtab-customize-panel" orient="vertical">
             <div id="newtab-customize-panel-anchor"></div>
             <div id="newtab-customize-panel-inner-wrapper">
-              <div id="newtab-customize-title">
-                Options
+              <div id="newtab-customize-title" data-l10n-id="panel-option-title">
+                <!-- Options -->
               </div>
 
               <div class="newtab-customize-complex-option">
@@ -125,8 +128,13 @@
       $("#draggable").draggable();
     });
   </script>
+  
   <script src="js/index.js"></script>
   <script src="js/clock.js"></script>
+  
+  <!-- Eventually we'll want to add l20n to toolkit/modules/ or toolkit/content/ -->
+  <!-- <script defer src="resource://qbrt/modules/l20n.js"></script> -->
+  <script defer src="node_modules/l20n/dist/web/l20n.js"></script>
 
   </body>
 

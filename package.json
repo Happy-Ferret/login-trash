@@ -7,6 +7,7 @@
     }
   },
   "dependencies": {
-    "@polymer/paper-input": "0.0.3"
+    "@polymer/paper-input": "0.0.3",
+    "l20n": "^5.0.0"
   }
 }
